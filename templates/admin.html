@@ -17,7 +17,7 @@
       </script>
       <style>
       .campostyle{
-        margin: 10px 5px -10px 5px;
+        margin: -10px 5px -10px 5px;
         padding: 40px;
         display: flex;
         flex-direction: column;
@@ -73,13 +73,26 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">Nome do arquivo</span>
             </div>
-            <input type="text" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm" name="nome_arquivo">
           </div>
           <div class="data">    
 <!--          <span id ="data">
             <input name="employee" type="checkbox" value="Alex"/>
             <label for="employee">Alex</label>
-            </span>-->  
+            </span>-->
+            <span>Tipo do arquivo</span>
+            <div class="form-check" style="margin-top:10px">
+              <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" value="CSV">
+              <label class="form-check-label" for="flexRadioDefault1">
+                CSV
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" value="XLS">
+              <label class="form-check-label" for="flexRadioDefault1">
+                XLS
+              </label>
+            </div>   
             <div id="getcampos" class="campostyle"></div>
             <script type="text/javascript"
             src="{{ url_for('static', filename='admin.js') }}"></script>

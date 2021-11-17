@@ -104,12 +104,119 @@ let vars =   ['NU_ANO_CENSO',
  'IN_INGRESSO_PROCESSO_SELETIVO',
  'NU_ANO_INGRESSO']
 
+let vars_desc = ['Ano de referência do Censo Superior',
+    'Código único de identificação da IES',
+    'Tipo da Categoria Administrativa da IES',
+    'Tipo da Organização Acadêmica da IES',
+    'Código único de identificação do curso gerado pelo E-MEC',
+    'Código de identificação do polo vinculado ao curso',
+    'Tipo do turno do curso ao qual o aluno está vinculado',
+    'Tipo do grau acadêmico conferido ao diplomado pelo curso',
+    'Tipo da modalidade de ensino do curso',
+    'Tipo do nível acadêmico do curso',
+    'Código de identificação do curso, a partir de uma adaptação da metodologia internacional de classificação Eurostat/ Unesco/ OCDE',
+    'Código de identificação gerado pelo Inep para o aluno da educação superior',
+    'Código de identificação gerado pelo Inep para o vínculo do aluno ao curso',
+    'Código de identificação gerado pelo Inep para o vínculo do aluno em seu curso de origem, ou seja, de onde foi transferido.',
+    'Tipo da cor/raça do aluno',
+    'Informa o sexo do aluno',
+    'Ano de nascimento do aluno',
+    'Mês de nascimento do aluno',
+    'Dia de nascimento do aluno',
+    'Idade que o aluno completa no ano de referência do Censo',
+    'Tipo da nacionalidade do aluno',
+    'Código do país de nascimento ou de naturalização do aluno estrangeiro',
+    'Código do IBGE da Unidade da Federação de nascimento do aluno',
+    'Código do IBGE do município de nascimento do aluno',
+    'Informa se o aluno é uma pessoa com deficiência, transtorno global do desenvolvimento ou altas habilidades/superdotação',
+    'Informa se o aluno é uma pessoa com deficiência auditiva',
+    'Informa se o aluno é uma pessoa com deficiência física',
+    'Informa se o aluno é uma pessoa com deficiência intelectual',
+    'Informa se o aluno é uma pessoa com deficiência múltipla',
+    'Informa se o aluno é uma pessoa surda',
+    'Informa se o aluno é uma pessoa com surdocegueira',
+    'Informa se o aluno é uma pessoa com baixa visão',
+    'Informa se o aluno é uma pessoa cega ',
+    'Informa se o aluno é uma pessoa com altas habilidades/superdotação',
+    'Informa se o aluno é uma pessoa com autismo infantil',
+    'Informa se o aluno é uma pessoa com Síndrome de Asperger',
+    'Informa se o aluno é uma pessoa com Síndrome de Rett',
+    'Informa se o aluno é uma pessoa com Transtorno Desintegrativo da Infância',
+    'Tipo de situação de vínculo do aluno no curso',
+    'Somatório do total da carga horária dos componentes curriculares que fazem parte da matriz do curso',
+    'Somatório da carga horária dos componentes curriculares que o aluno tenha aproveitado e que fazem parte da matriz do curso',
+    'Data de ingresso do aluno no curso correspondente ao 1º semestre (01/01/2015) e ao 2º semestre (01/07/2015)',
+    'Informa se o aluno ingressou no curso por vestibular. ',
+    'Informa se o aluno ingressou no curso pelo Enem. ',
+    'Informa se o aluno ingressou no curso por meio da Avaliaçaõ Seriada',
+    'Informa se o aluno ingressou no curso por meio de seleção simplificada',
+    'Informa se o aluno ingressou no curso por outros tipos de seleção.',
+    'Informa se o aluno ingressou no curso por  meio de vagas remanescentes',
+    'Informa se  o aluno ingressou no curso por meio de vagas para programas especiais',
+    'Informa se o aluno ingressou no curso  por meio de Transferência Ex-officio',
+    'Informa se o aluno ingressou no curso por meio de decisão judicial',
+    'Informa se o aluno ingressou no curso por programa de convênio para estudantes estrangeiros ',
+    'Forma de ingresso que indica que o aluno se formou em um curso de Bacharelado Interdisciplinar ou Licenciatura Interdisciplinar e que ingressou em um curso de terminalidade.',
+    'Informa se o aluno ingressou no curso por outras formas de ingresso.',
+    'Informa se o aluno participa de programa de reserva de vagas" ',
+    'Informa se o aluno ingressou por meio de programa de reserva de vagas de cunho etnico',
+    'informa se o aluno ingressou por meio de programa de reserva de vagas para pessoas com deficiência',
+    ' Informa se o aluno ingressou por meio de programa de reserva de vagas para egressos da escola pública',
+    'Informa se o aluno ingressou por meio de programa de reserva de vagas de cunho social/renda familiar',
+    'Informa se o aluno ingressou por meio de programas de reserva de vagas diferentes dos seguintes tipos : étnico, pessoa com deficiência, estudante procedente de escola pública, social/renda familiar ',
+    'Informa se o aluno utiliza financiamento estudantil',
+    'Informa se o aluno utiliza o Fundo de Financiamento Estudantil (Fies) como forma de financimanto estudantil reembolsável',
+    'Informa se o aluno utiliza financiamento estudantil reembolsável do governo estadual',
+    'Informa se o aluno utiliza financiamento estudantil reembolsável do governo municipal',
+    'Informa se o aluno utiliza financiamento estudantil reembolsável administrado pela IES',
+    'Informa se o aluno utiliza financiamento estudantil reembolsável administrado por entidades externas à IES',
+    'Informa se o aluno utiliza financiamento estudantil reembolsável administrado por outras entidades',
+    'Informa se o aluno é bolsista integral do Programa Universidade para Todos (Prouni), tipo de financiamento estudantil não reembolsável',
+    'Informa se o aluno é bolsista parcial do Programa Universidade para Todos (Prouni), tipo de financiamento estudantil não reembolsável',
+    'Informa se o aluno utiliza financiamento estudantil estadual não reembolsável',
+    'Informa se o aluno utiliza financiamento estudantil municipal não reembolsável',
+    'Informa se o aluno utiliza financiamento estudantil não reembolsável administrado pela IES',
+    'Informa se o aluno utiliza financiamento estudantil não reembolsável administrado por entidades externas à IES',
+    'Informa se o aluno utiliza financiamento estudantil não reembolsável administrado por outras formas',
+    'Informa se o aluno recebe algum tipo de apoio social na forma de moradia, transporte, alimentação, material didático e bolsas (trabalho/permanência)',
+    'Informa se o aluno recebe apoio alimentação',
+    'Informa se o aluno recebe auxílio financeiro destinado a alunos em situação de vulnerabilidade socioeconômica ou pertencente a grupos étnicos específicos',
+    'Informa se o aluno recebe remuneração referente a trabalhos prestados nas dependências da IES ou unidades vinculadas',
+    'Informa se o aluno recebe apoio para aquisição de material didático',
+    'Informa se o aluno recebe apoio moradia. ',
+    'Informa se o aluno recebe apoio para transporte até a IES',
+    'Informa se o aluno participa de algum tipo de atividade extracurricular (estágio não obrigatório, extensão, monitoria e pesquisa)',
+    'Informa se o aluno faz atividade extracurricular de estágio não obrigatório visando ao seu aperfeiçoamento profissional',
+    'Informa se o aluno participa de atividade extracurricular de extensão',
+    'Informa se o aluno participa de atividade extracurricular de monitoria',
+    'Informa se o aluno participa de atividade extracurricular de pesquisa',
+    'Informa se o aluno recebe bolsa/remuneração por fazer atividade extracurricular de estágio não obrigatório. ',
+    'Informa se o aluno recebe bolsa/remuneraçãopor participar de atividade extracurricular de extensão. ',
+    'Informa se o aluno recebe bolsa/remuneração por participar de atividade extracurricular de monitoria. ',
+    'Informa se o aluno recebe bolsa/remuneração por participar de atividade extracurricular de pesquisa.',
+    'Tipo de escola que o aluno concluiu ensino médio',
+    'Informa se o aluno participa do programa especial para a formação de professores em exercício na rede publica de educação básica (PARFOR)',
+    'Semestre (do ano de referência do Censo) em que o aluno se formou',
+    'Semestre de referência do preenchimento do vínculo do curso',
+    'Informa se o aluno está regularmente matriculado em curso de graduação, que se vincula temporariamente a outra instituição, sendo ela nacional ou internacional',
+    'Tipo de mobilidade acadêmica ao qual o aluno participa.',
+    'Tipo de mobilidade acadêmica internacional ao qual o aluno participa.',
+    'Código da instituição nacional receptora do aluno em mobilidade acadêmica, na qual seu vinculo é temporário',
+    'Código do país da instituição receptora do aluno em mobilidade acadêmica, na qual seu vinculo é temporário',
+    'Informa se o aluno é matriculado no curso',
+    'Informa se o aluno é concluinte',
+    'Informa se o aluno é ingressante no curso, não importando a forma de ingresso utilizada.',
+    'Informa se o aluno é ingressante no curso por meio de processo seletivo de vaga nova.',
+    'Informa se o aluno ingressou no curso por meio de processo seletivo principal',
+    'Ano de ingresso do aluno no curso']
 
  for(var i=0;i<vars.length;i++){
     const data = document.getElementById('getcampos')
 
     const span = document.createElement('span');
     span.id = vars[i];
+
+    const span_desc = document.createElement('span');
    
     const label = document.createElement('label')
     label.innerText = vars[i];
@@ -120,11 +227,17 @@ let vars =   ['NU_ANO_CENSO',
     checkbox.checked = false;
     checkbox.name = 'campos';
     checkbox.value = vars[i]
-   
+
+    const desc = document.createElement('label');
+    desc.innerText = vars_desc[i]
+    desc.style.fontSize = '10px'
+
     span.appendChild(label);
     span.appendChild(checkbox);
+    span_desc.appendChild(desc);
    
     data.appendChild(span);
+    data.appendChild(span_desc);
 }
 
 

@@ -15,6 +15,8 @@ def admin():
     if request.method =='POST':
         print(request.form.getlist('campos'))
         print(request.form.get('ano'))
+        print(request.form.get('tipo'))
+        print(request.form.get('nome_arquivo'))
     return render_template("admin.html", boolean = True)
 
 
