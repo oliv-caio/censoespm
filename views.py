@@ -12,8 +12,9 @@ def home():
 
 @views.route('/admin',methods=['GET','POST'])
 def admin():
-    data = request.form
-    print(data)
+    if request.method =='POST':
+        print(request.form.getlist('campos'))
+        print(request.form.get('ano'))
     return render_template("admin.html", boolean = True)
 
 

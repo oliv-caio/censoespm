@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script type="text/javascript">
@@ -16,7 +15,26 @@
           return values;
       }
       </script>
-    <title>Hello, world!</title>
+      <style>
+      .campostyle{
+        margin: 10px 5px -10px 5px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+      .campostyle label {
+      
+      padding-right: 10px;
+      white-space: nowrap;
+      }
+      .campostyle input {
+      vertical-align: middle;
+      }
+      .campostyle label span {
+      vertical-align: middle;
+} 
+      </style>
+    <title>Admin</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -42,41 +60,30 @@
     align-items: center;
     text-align: center;
     min-height: 90vh;">
-        <form>
+        <form method="POST">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+            <label for="exampleFormControlSelect1">Ano Censo</label>
+            <select class="form-control" id="exampleFormControlSelect1" name = "ano">
+              <option value="2018">2018</option>ß
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect2">Example multiple select</label>
-            <select multiple class="form-control" id="exampleFormControlSelect2">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Nome do arquivo</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="data">    
-            <span id ="getcampos">
+<!--          <span id ="data">
             <input name="employee" type="checkbox" value="Alex"/>
             <label for="employee">Alex</label>
-            </span>
-            <input type="button" onclick="alert(getCheckedCheckboxesFor('employee'));" value="Get Values" />
+            </span>-->  
+            <div id="getcampos" class="campostyle"></div>
+            <script type="text/javascript"
+            src="{{ url_for('static', filename='admin.js') }}"></script>
+            <button type="submit" class="btn btn-primary" style="margin-bottom: 20px;">Submit</button>
         </div>
         </form>
     </div>
